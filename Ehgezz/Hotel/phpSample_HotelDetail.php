@@ -52,14 +52,14 @@ function parseOutput(){	//parse the Search response to get values to use in deta
 	if(!$xml)
 	{
 		//trigger_error("Encoding Error!", E_USER_ERROR);
-		header("Location: http://localhost/api/Hotel/error.php"); //Use the Location of the error page
+		header("Location:http://104.200.28.74/Ehgezz/Hotel/error.php"); //Use the Location of the error page
   	}
 
 	$Results = $xml->children('SOAP',true);
 	foreach($Results->children('SOAP',true) as $fault){
 		if(strcmp($fault->getName(),'Fault') == 0){
 			//trigger_error("Error occurred request/response processing!", E_USER_ERROR);
-			header("Location: http://localhost/api/Hotel/error.php"); //Use the Location of the error page
+			header("Location:http://104.200.28.74/Ehgezz/Hotel/error.php"); //Use the Location of the error page
 		}
 	}
 	global $count;
