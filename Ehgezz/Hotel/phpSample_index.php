@@ -86,7 +86,7 @@ function runRequest($message){ // Run the request
 	if (curl_errno($soap_do) != '')
     {
         //print curl_errno($soap_do) . ' - ' . curl_error($soap_do);
-		header("Location: http://localhost/api/Hotel/error.php"); //Use the location where you are keeping the error page
+		header("Location:http://104.200.28.74/backend_theme_Eigo/Ehgezz/Hotel/error.php"); //Use the location where you are keeping the error page
     }
 	curl_close($soap_do);
 	return $result;
